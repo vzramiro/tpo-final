@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    margin: 5px;
+    padding-top: 10px;
+   /* background-color: #f5f3f3;*/
+   background-color:#f5f3f3;
+}
+
+/*-------------------------------------*/
+/*Estilo del encabezado  */
+/*-------------------------------------*/
+/* .encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+.encabezado img {
+    width: 150px;
+    margin: 0px 15px; 
+}
+.encabezado-centro h1 {
+    font-size: 35px;
+}
+.encabezado h1 {
+    margin-top: 30px;
+} */
+
+/*-------------------------------------*/
+/*Estilo del menu*/
+
+/*.container nav {*/
+/*-------------------------------------*/
+
+
+.menu {
+    display: flex;
+    background-color: #FFFFFF;
+    padding: 20px;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu img {
+    width: 100px;
+    margin: 0px 20px;
+}
+.menu ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0px;
+}
+
+.menu ul li {
+    display: inline-block;    
+}
+.menu li a {
+    font-size: 16px;
+    color:black;
+    padding: 10px;
+    text-decoration: none;
+}
+.menu li a:hover {
+    padding: 15px;
+    background-color: black;
+    animation: boton-menu 0.5s infinite;
+}
+@keyframes boton-menu {
+    0% {
+        transform: scaleX(0.7);
+        background: #D3DADB;
+    } 
+    50% {
+        transform: scaleX(0.7);
+        border-radius: 5px;
+        /*background-color: white;*/
+    }
+    100% { 
+        transform: scaleX(-0.5);
+        background: #D3DADB;
+    }  
+}
+
+/*-------------------------------------*/
+/*Estilo del footer  */
+/*-------------------------------------*/
+
+.pie {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
+    margin-bottom: 20px;
+    color: white;
+}
+.iconos {
+    display: flex;
+    column-gap: 15px;
+}
+.iconos a {
+    color: white;
+    font-size: 14px;
+}
+
+/*-------------------------------------*/
+/*Estilo del footer  */
+/*-------------------------------------*/
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #222;
+}
+
+.grid {
+    display: grid;
+    max-width: 1100px; /* 1100 */
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px,280px));
+    padding-bottom: 50px;
+}
+
+.items {
+    background-color: #fff;
+    border: solid#e1e1e1;
+}
+.items img {
+    width: 100%;
+    height: 270px;
+
+}
+.items:hover {
+    background-color: #d3dadb;
+    transition: all .3s;
+}
+
+
+
+.info {
+    padding: 15px;
+}
+.info h3 {
+    font-size: 1.6rem;
+}
+
+.info p {
+    font-size: 1.5rem;
+}
+
+
+.precio {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder; 
+}
+
+.precio p {
+    font-size: 1.8rem;
+}
+
+.info h3,
+.info p {
+    color: #222;
+    margin-bottom: 15px;
+}
+.precio p:first-child {
+    text-decoration: line-through;
+}
+
+.info button {
+    padding: 1rem;
+    width: 100%;
+    background-color: #33c3f0;
+    border: none;
+    outline: none;
+    color: #ffff;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.info button:hover {
+    background-color: #2da0c3;
+    transition: all .3s;
+}
+
+
+/*-------------------------------------*/
+/*Estilo del articulos about*/
+/*-------------------------------------*/
+.contenedor-about {
+    display: flex;
+    padding: 10px;
+    height: 300px;
+    color: white;
+    background-color: #59AB6E;
+}
+.contenedor-about div {
+    padding: 10px;
+}
+.contenedor-about img {
+    height: 200px;
+}
+
+.contenedor-about div h3 {
+    margin: 0px 0px 0px 50px;
+    padding-top: 50px;
+    font-size: 2.5vw;
+}
+.contenedor-about div p {
+    margin: 20px 0px 0px 50px;
+    padding-top: 30px;
+    text-align: justify;
+    font-size: 1.5vw;
+}

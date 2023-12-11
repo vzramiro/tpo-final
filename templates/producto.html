@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="../css/estiloapp.css">
+    <script src="https://kit.fontawesome.com/f3be89a657.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="menu">
+        <img src="../img/logo.png" alt="Logo">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="producto.html">Productos</a></li>
+            <li><a href="../contacto.html">Consultas</a></li>
+            <li><a href="../about.html">Quienes somos?</a></li>
+        </ul>
+    </nav>
+    <main>
+        
+        <div id="app" class="container"> 
+            <h1>Variedad de productos</h1>
+            <br>    
+            <br><br>
+            <div v-if="error">
+                <p>Lo sentimos , ........</p>
+            </div>
+            
+            <div  v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+                </section>
+                <div class="grid" v-else>
+                    <div class="items" v-for="producto in productos">
+                        <img width="60" :src="producto.imagen" :alt="producto.nombre">
+                        <div class="info">
+                            <h3><strong>{{producto.nombre}}</strong></h3>
+                            <p>{{producto.descripcion}}</p>
+                            <div class="precio">
+                                <p>$ {{producto.precioof}}</p>
+                                <p>$ {{producto.precio}}</p>
+                            </div>
+                            <button>Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </main>
+    <footer class="pie">
+        <div>
+            <p>&copy; Grupo -</p>
+        </div>
+        <div class="iconos">
+            <a href="010-020-0340"><span class="fa-solid fa-phone" title="010-020-0340"></span></a>
+            <a href="#"><span class="fab fa-facebook" title="Ir a Facebook"></span></a>
+            <a href="#"><span class="fab fa-instagram" title="Ir a Instagram"></span></a>
+            <a href="#"><span class="fab fa-twitter" title="Ir a Twitter"></span></a>
+            <a href="mailto:info@company.com"><span class="fas fa-envelope" title="info@company.com"></span></a>
+        </div>
+    </footer>
+    <script>
+        <!--Link de Bootstrap-->
+        src = "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity = "sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin = "anonymous"</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+    <script src="../js/productos.js"></script>
+</body>
+
+</html>
